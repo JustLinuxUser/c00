@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adokhnia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/05 11:47:46 by adokhnia          #+#    #+#             */
-/*   Updated: 2023/06/05 15:57:59 by adokhnia         ###   ########.fr       */
+/*   Created: 2023/06/05 16:16:41 by adokhnia          #+#    #+#             */
+/*   Updated: 2023/06/05 16:34:57 by adokhnia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include<unistd.h>
 
-void	ft_print_alphabet(void)
+void	ft_print_numbers(void)
 {
-	char	start;
-	char	i;
+	char	iter;
+	char	c;
 
-	i = 0;
-	start = 'a';
-	while (i < 26)
+	iter = 0;
+	c = '0';
+	while (iter < 10)
 	{
-		write(1, &start, 1);
-		start++;
-		i++;
+		write(1, &c, 1);
+		c++;
+		iter++;
 	}
 }
