@@ -1,6 +1,19 @@
-#include "unistd.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: adokhnia <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/12 14:08:50 by adokhnia          #+#    #+#             */
+/*   Updated: 2023/06/12 14:08:51 by adokhnia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void print_int2(int num){
+#include <unistd.h>
+
+void	print_int2(int num)
+{
 	char	zero;
 	char	temp;
 
@@ -13,12 +26,11 @@ void print_int2(int num){
 	}
 	else
 	{
-		temp = zero + num/10;
+		temp = zero + num / 10;
 		write(1, &temp, 1);
-		temp = zero + num%10;
+		temp = zero + num % 10;
 		write(1, &temp, 1);
 	}
-	
 }
 
 void	print_space(void)
@@ -37,31 +49,27 @@ void	print_coma(void)
 	write(1, &coma, 1);
 }
 
-void	ft_print_comb2(void){
+void	ft_print_comb2(void)
+{
 	int	num0;
 	int	num1;
 
 	num0 = 0;
 	while (num0 < 99)
 	{
-		num1=num0+1;
+		num1 = num0 + 1;
 		while (num1 <= 99)
 		{
 			print_int2(num0);
 			print_space();
 			print_int2(num1);
-			if(num0 != 98 || num1 != 99)
+			if (num0 != 98 || num1 != 99)
 			{
-			print_coma();
-			print_space();
+				print_coma();
+				print_space();
 			}
 			num1++;
 		}
 		num0++;
 	}
 }
-
-// int	main()
-// {
-// 	ft_print_comb();
-// }
